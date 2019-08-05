@@ -32,7 +32,7 @@ class Solution {
 
 
 ## Solution 2 - Hash Map
-利用HashMap作为Sliding Window，若该字符已存在在Map中则把左边界更新，并将Map值更新。  
+利用HashMap作为Sliding Window，若该字符已存在在Map中则把左边界更新，并将Map值更新,可以跳过使用Set时不断右移左边界的过程。  
 * 空间复杂度：$O(min(m, n))$  
 * 时间复杂度：$O(n)$
 
