@@ -69,3 +69,45 @@ class Solution {
     }
 }
 ```
+
+## Solution 2 - Binary Search Improvement
+@ [Video](https://www.youtube.com/watch?v=LPFhl65R7ww)  
+如果我们已知一个数组的分割方式，我们也可以得知另一数组的分割方式，通过比较边界的四个数字我们可以得知这种分割方式是否合理。若不合理可以继续利用二分法的方式修改一个数组的分割方式，直至得到正确解。  
+时间复杂度：$O(log(min(m,n)))$  
+空间复杂度：$O(1)$
+
+```java
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        if (nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1);
+        return findMedianHelper(nums1, nums2);
+    }
+    private double findMedianHelper(int[] nums1, int[] nums2) {
+        int start = 0;
+        int end = nums1.length;
+        int len = (nums1.length + nums2.length + 1) / 2;
+        while (start <= end) {
+            int index1 = (start + end) / 2;
+            int index2 = len - index1;
+            
+            int maxLeft1 = (index1 == 0) ? Integer.MIN_VALUE : nums1[index1 - 1];
+            int minRight1 = (index1 == nums1.length) ? Integer.MAX_VALUE : nums1[index1];
+            
+            int maxLeft2 = (index2 == 0) ? Integer.MIN_VALUE : nums2[index2 - 1];
+            int minRight2 = (index2 == nums2.length) ? Integer.MAX_VALUE : nums2[index2];
+            
+            if (maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
+                if ((nums1.length + nums2.length) % 2 == 0) {
+                    return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;
+                }
+                return (double)Math.max(maxLeft1, maxLeft2);
+            } else if (maxLeft1 > minRight2) {
+                end = index1 - 1;
+            } else {
+                start = index1 + 1;
+            }
+        }
+        throw new IllegalArgumentException();
+    }
+}
+```
