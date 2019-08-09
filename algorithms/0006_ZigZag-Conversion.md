@@ -11,7 +11,7 @@
 ```java
 class Solution {
     public String convert(String s, int numRows) {
-        if (numRows <= 1) return s;
+        if (numRows <= 1 || numRows >= s.length()) return s;
         int T = 2 * (numRows - 1);
         StringBuilder zigzag = new StringBuilder();
         for (int i = 0; i < s.length(); i += T) zigzag.append(s.charAt(i));
