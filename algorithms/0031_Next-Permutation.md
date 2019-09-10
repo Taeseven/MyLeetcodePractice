@@ -1,4 +1,4 @@
-# Maximum Subarray
+# Next Permutation
 ------------------
 @ [Description](https://leetcode.com/problems/next-permutation/)  
 @ Tags: Array   
