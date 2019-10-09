@@ -1,6 +1,6 @@
-# Combinations
+# Combinations II
 ------------------
-@ [Description](https://leetcode.com/problems/combination-sum/)  
+@ [Description](https://leetcode.com/problems/combination-sum-ii/)  
 @ Tags: Array, Backtracking   
 @ Medium
 
