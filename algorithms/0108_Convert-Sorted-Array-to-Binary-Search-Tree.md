@@ -2,7 +2,7 @@
 ------------------
 @ [Description](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)  
 @ Tags: Tree, DFS     
-@ Medium
+@ Easy
 
 ------------------
 ## Solution
