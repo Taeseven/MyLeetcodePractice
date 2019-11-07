@@ -23,3 +23,30 @@ class Solution {
     }
 }
 ```
+
+## Solution 2 - Two Pointers
+sort，然后利用两个指针处理。
+```java
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0)
+            return new int[0];
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        Set<Integer> set = new HashSet<>();
+        int i = 0, j = 0;
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] == nums2[j]) {
+                set.add(nums1[i]);
+                i++; j++;
+            } else if (nums1[i] < nums2[j]) i++;
+            else j++;
+        }
+        int[] res = new int[set.size()];
+        i = 0;
+        for (Integer n : set)
+            res[i++] = n;
+        return res;
+    }
+}
+```
