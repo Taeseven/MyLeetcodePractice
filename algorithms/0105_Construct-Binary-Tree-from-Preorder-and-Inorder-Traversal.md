@@ -1,6 +1,6 @@
-# Construct Binary Tree from Inorder and Postorder Traversal
+# Construct Binary Tree from Preorder and Inorder Traversal
 ------------------
-@ [Description](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)  
+@ [Description](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)  
 @ Tags: Array, Tree, DFS     
 @ Medium
 

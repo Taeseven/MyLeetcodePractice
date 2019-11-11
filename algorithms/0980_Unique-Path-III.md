@@ -1,8 +1,8 @@
 #  Unique Paths III
 ------------------
-@ [Description](https://leetcode.com/problems/minimum-path-sum/)  
+@ [Description](https://leetcode.com/problems/unique-paths-iii/)  
 @ Tags: DFS, Backtracking     
-@ Medium
+@ Hard
 
 ------------------
 ## Solution - DFS
