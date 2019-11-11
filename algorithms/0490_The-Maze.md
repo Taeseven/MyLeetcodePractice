@@ -2,7 +2,7 @@
 ------------------
 @ [Description](https://leetcode.com/problems/the-maze/)  
 @ Tags: BFS, DFS    
-@ Easy
+@ Medium
 
 ------------------
 ## Solution 1 - BFS
