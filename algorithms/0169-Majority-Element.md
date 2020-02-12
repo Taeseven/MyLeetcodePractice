@@ -2,7 +2,7 @@
 ------------------
 @ [Description](https://leetcode.com/problems/majority-element/)  
 @ Tags: Array, Divide and Conquer, Bit Manipulation   
-@ East
+@ Easy
 
 ------------------
 ## Solution 1 - Divide and Conquer
